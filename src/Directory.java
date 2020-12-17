@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Directory extends ElementFileSystem {
+public class Directory extends Blocks{
+    private static final Blocks prev_blocks =null ;
     private String name;
     private int size;
 
@@ -17,6 +18,7 @@ public class Directory extends ElementFileSystem {
     List<File> list_f;
     List<Directory> list_d;
     public Directory(String name){
+        super(prev_blocks);
         this.name = "d"+name;
         this.size = 1;
         list_f = new ArrayList<>();

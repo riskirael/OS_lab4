@@ -1,10 +1,11 @@
 import java.util.List;
 
-public class File extends ElementFileSystem {
+public class File extends Blocks {
+    private static final Blocks prev_blocks =null ;
     private String name;
     private int size;
     private List<Integer> blocks;
-    private File prev;
+    private Blocks prev;
 
     public List<Integer> getBlocks() {
         return blocks;
@@ -13,18 +14,18 @@ public class File extends ElementFileSystem {
     public void setBlocks(List<Integer> blocks) {
         this.blocks = blocks;
     }
-    public File getPrev() {
+    public Blocks getPrev() {
         return prev;
     }
 
-    public void setPrev(File n) {
+    public void setPrev(Blocks n) {
         prev = n;
     }
 
-    public File(String name, int size, File prev) {
+    public File(String name, int size) {
+        super(prev_blocks);
         this.name = name;
         this.size = size;
-        this.prev=prev;
     }
 
     public String getName() {
