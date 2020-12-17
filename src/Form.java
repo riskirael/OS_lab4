@@ -90,7 +90,9 @@ public class Form {
                         }
                         if (!flag) {
                             try {
-                                File file = new File(txt_name.getText(), Integer.parseInt(txt_size.getText()));
+                                File file = null;
+                                File file_prev=file;
+                                file = new File(txt_name.getText(), Integer.parseInt(txt_size.getText()),file_prev);
                                 if (!work.loadFile(file)) {
                                     JOptionPane.showMessageDialog(frame, "Не хватает места");
                                 } else {

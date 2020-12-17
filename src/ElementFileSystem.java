@@ -1,6 +1,6 @@
 import java.util.List;
 
-public abstract class ElementsFileSystem {
+public abstract class ElementFileSystem {
     private String name;
     private int size;
     private List<Integer> blocks;

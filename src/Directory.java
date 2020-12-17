@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Directory extends ElementsFileSystem {
+public class Directory extends ElementFileSystem {
     private String name;
     private int size;
 
@@ -36,4 +36,3 @@ public class Directory extends ElementsFileSystem {
         this.size = size;
     }
 }
-
